@@ -1,5 +1,5 @@
-sop-front-end-base
-==================
+Someoddpilot Front End Base
+===========================
 
 A basic starting point for front end dev work
 
