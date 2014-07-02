@@ -1,12 +1,12 @@
-var options = {
-  'paths':  ['stylus'],
-  'import': ['variables']
-};
-
 module.exports = function (grunt) {
+  var stylusOptions = {
+    'paths':  ['stylus'],
+    'import': ['variables']
+  };
+
   grunt.config.set('stylus', {
     critical: {
-      options: options,
+      options: stylusOptions,
       files: {
         'assets/css/critical.css': [
           'stylus/critical/critical.styl'
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
       }
     },
     secondary: {
-      options: options,
+      options: stylusOptions,
       files: {
         'assets/css/secondary.css': [
           'stylus/secondary/secondary.styl'
@@ -25,20 +25,26 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
 
+  var watchOptions = {
+    spawn: false,
+  };
+
   grunt.config.set('watch', {
     critical: {
       files: [
         'stylus/critical/*.styl',
         'stylus/variables.styl',
       ],
-      tasks: ['stylus:critical']
+      tasks:   ['stylus:critical'],
+      options: watchOptions
     },
     secondary: {
       files: [
         'stylus/secondary/*.styl',
         'stylus/variables.styl'
       ],
-      tasks: ['stylus:secondary']
+      tasks: ['stylus:secondary'],
+      options: watchOptions
     }
   });
 
