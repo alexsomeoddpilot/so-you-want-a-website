@@ -1,63 +1,45 @@
+/**
+ * borrowed from sails.js
+ */
 module.exports = function (grunt) {
-  var stylusOptions = {
-    'paths':  ['stylus'],
-    'import': ['variables']
-  };
 
-  grunt.config.set('stylus', {
-    critical: {
-      options: stylusOptions,
-      files: {
-        'assets/css/critical.css': [
-          'bower_components/normalize.styl/normalize.styl',
-          'stylus/critical/critical.styl'
-        ]
-      }
-    },
-    secondary: {
-      options: stylusOptions,
-      files: {
-        'assets/css/secondary.css': [
-          'stylus/secondary/secondary.styl'
-        ]
-      }
-    }
-  });
+  var includeAll = require('include-all');
 
-  grunt.loadNpmTasks('grunt-contrib-stylus');
+  /**
+   * Loads Grunt configuration modules from the specified
+   * relative path. These modules should export a function
+   * that, when run, should either load/configure or register
+   * a Grunt task.
+   */
+  function loadTasks(relPath) {
+    return includeAll({
+      dirname: require('path').resolve(__dirname, relPath),
+      filter: /(.+)\.js$/
+    }) || {};
+  }
 
-  var watchOptions = {
-    spawn: false,
-  };
-
-  grunt.config.set('watch', {
-    critical: {
-      files: [
-        'stylus/critical/*.styl',
-        'stylus/variables.styl',
-      ],
-      tasks:   ['stylus:critical'],
-      options: watchOptions
-    },
-    secondary: {
-      files: [
-        'stylus/secondary/*.styl',
-        'stylus/variables.styl'
-      ],
-      tasks: ['stylus:secondary'],
-      options: watchOptions
-    }
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
-  grunt.config.set('bower', {
-    install: {
-      options: {
-        targetDir: 'bower_components'
+  /**
+   * Invokes the function from a Grunt configuration module with
+   * a single argument - the `grunt` object.
+   */
+  function invokeConfigFn(tasks) {
+    for (var taskName in tasks) {
+      if (tasks.hasOwnProperty(taskName)) {
+        tasks[taskName](grunt);
       }
     }
-  });
+  }
 
-  grunt.loadNpmTasks('grunt-bower-task');
+  // Load task functions
+  var taskConfigurations = loadTasks('./tasks/config'),
+    registerDefinitions = loadTasks('./tasks/register');
+
+  // (ensure that a default task exists)
+  if (!registerDefinitions.default) {
+    registerDefinitions.default = function (grunt) { grunt.registerTask('default', []); };
+  }
+
+  // Run task functions to configure Grunt.
+  invokeConfigFn(taskConfigurations);
+  invokeConfigFn(registerDefinitions);
 };
