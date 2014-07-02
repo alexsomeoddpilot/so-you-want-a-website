@@ -1,0 +1,19 @@
+{
+  "name": "someoddpilot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "connect": "^3.0.1",
+    "serve-static": "^1.2.3"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-stylus": "^0.17.0"
+  }
+}
