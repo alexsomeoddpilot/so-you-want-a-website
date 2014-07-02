@@ -1,3 +1,5 @@
 /node_modules/
 
 /assets/css/
+
+/bower_components/

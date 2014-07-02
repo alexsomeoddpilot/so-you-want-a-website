@@ -9,6 +9,7 @@ module.exports = function (grunt) {
       options: stylusOptions,
       files: {
         'assets/css/critical.css': [
+          'bower_components/normalize.styl/normalize.styl',
           'stylus/critical/critical.styl'
         ]
       }
@@ -49,4 +50,14 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.config.set('bower', {
+    install: {
+      options: {
+        targetDir: 'bower_components'
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-bower-task');
 };
