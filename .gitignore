@@ -32,3 +32,6 @@ assets/css
 
 # Vendor Files
 assets/vendor
+
+# Sublime Files
+*.sublime*
