@@ -2,7 +2,8 @@ require('newrelic');
 
 var express = require('express'),
   serveStatic = require('serve-static'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  mailer = require('./api/services/Mailer');
 
 var portNum = process.env.PORT || 8080;
 
@@ -13,9 +14,17 @@ express()
   }))
   .use(serveStatic(__dirname + '/assets'))
   .post('/lead/create', function (req, res) {
-    res.json({
-      status: 'ok',
-      data: req.body
+    mailer.mail({
+      from:    'Alex Robertson <alex@someoddpilot.com>',
+      to:      'Alex Robertson <alex@someoddpilot.com>',
+      subject: 'SYWAW',
+      text:    'So you want a website?'
+    }, function () {
+
+      res.json({
+        status: 'ok',
+        data: req.body
+      });
     });
   })
   .listen(portNum);

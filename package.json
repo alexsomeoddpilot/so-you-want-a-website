@@ -25,6 +25,8 @@
     "express": "^4.8.6",
     "body-parser": "^1.6.6",
     "grunt-cli": "^0.1.13",
-    "newrelic": "^1.10.2"
+    "newrelic": "^1.10.2",
+    "nodemailer": "^1.2.1",
+    "nodemailer-smtp-transport": "^0.1.12"
   }
 }

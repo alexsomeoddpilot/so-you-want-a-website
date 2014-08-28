@@ -1,25 +1,28 @@
 var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
+var config = require('./../../config');
 
 // create reusable transport method (opens pool of SMTP connections)
-var smtpTransport = nodemailer.createTransport('SMTP', {
+var smtpTransport = nodemailer.createTransport(smtpTransport({
   service: 'Mandrill',
   auth: {
-    user: process.env.MANDRILL_USERNAME,
-    pass: process.env.MANDRILL_APIKEY
+    user: config.MANDRILL_USERNAME,
+    pass: config.MANDRILL_APIKEY
   }
-});
+}));
 
 module.exports = {
   mail: function(message, callback) {
     // send mail with defined transport object
     smtpTransport.sendMail(message, function (error, response) {
       if (error) {
-        sails.log.verbose(error);
+        console.log(error);
         callback();
         return;
       }
 
-      sails.log.verbose('Message sent: ' + response.message);
+      console.log('Message sent: ' + response.message);
       callback();
     });
   }
