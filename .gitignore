@@ -35,3 +35,6 @@ assets/vendor
 
 # Sublime Files
 *.sublime*
+
+# Bundled Browserify
+assets/js/bundle.js
