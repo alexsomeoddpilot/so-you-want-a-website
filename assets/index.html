@@ -4,9 +4,78 @@
   <meta charset="UTF-8">
   <title>Someoddpilot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
 
-  <script data-main="/js/main" src="/vendor/requirejs/require.js"></script>
+  <div class="container">
+    <div class="page-header">
+      <h1>So You Want a Website?</h1>
+    </div>
+    <form method="GET" class="form">
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Webhost</h2>
+
+          <div class="form-group">
+            <label for="input-webhost">
+              Do you have a current webhost?
+            </label>
+            <input type="text" class="form-control" id="input-webhost" name="webhost">
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do they support Wordpress?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="Yes"> Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="No"> No
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="Don't Know"> Don't Know
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-webhost-node">
+              Do they support Node.js?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="Yes"> Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="No"> No
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="Don't Know"> Don't Know
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>
