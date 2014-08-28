@@ -37,4 +37,4 @@ assets/vendor
 *.sublime*
 
 # Bundled Browserify
-assets/js/bundle.js
+assets/js/*bundle.js
