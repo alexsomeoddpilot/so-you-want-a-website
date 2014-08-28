@@ -1,3 +1,5 @@
+require('newrelic');
+
 var express = require('express'),
   serveStatic = require('serve-static'),
   bodyParser = require('body-parser');
