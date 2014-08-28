@@ -2,6 +2,8 @@ var express = require('express'),
   serveStatic = require('serve-static'),
   bodyParser = require('body-parser');
 
+var portNum = process.env.PORT || 8080;
+
 express()
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({
@@ -14,6 +16,6 @@ express()
       data: req.body
     });
   })
-  .listen(8080);
+  .listen(portNum);
 
-console.log('Serving to http://localhost:8080')
+console.log('Serving to http://localhost:' + portNum)
