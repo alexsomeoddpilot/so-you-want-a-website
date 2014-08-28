@@ -14,7 +14,5 @@
     "tests"
   ],
   "dependencies": {
-    "normalize.styl": "~3.0.0",
-    "requirejs": "~2.1.14"
   }
 }
