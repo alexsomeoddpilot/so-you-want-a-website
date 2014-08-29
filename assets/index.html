@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Someoddpilot</title>
@@ -7,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
+
 <body>
 
   <div class="container">
@@ -16,245 +18,40 @@
     <form action="/lead/create" method="POST" class="form">
 
       <div class="row">
-        <div class="col-md-6">
-          <h2>Webhost</h2>
+        <div class="col-md-6" id="contact-info">
+          <h2>Contact Info</h2>
 
           <div class="form-group">
-            <label for="input-webhost">
-              Do you have a current webhost?
+            <label for="input-name">
+              Name
             </label>
 
-            <input type="text" class="form-control" id="input-webhost" name="webhost">
+            <input type="text" class="form-control" id="input-name" name="name" required>
           </div>
-
           <div class="form-group">
-            <label for="input-webhost-wordpress">
-              Do they support Wordpress?
+            <label for="input-email">
+              Email
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-wordpress" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-wordpress" value="No"> No
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-wordpress" value="Don't Know"> Don't Know
-              </label>
-            </div>
+            <input type="email" class="form-control" id="input-email" name="email" required>
           </div>
-
           <div class="form-group">
-            <label for="input-webhost-node">
-              Do they support Node.js?
+            <label for="input-phone">
+              Phone
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-node" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-node" value="No"> No
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="webhost-node" value="Don't Know"> Don't Know
-              </label>
-            </div>
+            <input type="tel" class="form-control" id="input-phone" name="phone">
           </div>
-
-          <h2>DNS</h2>
-
           <div class="form-group">
-            <label>
-              Do you know where your DNS is controlled?
-            </label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="dns-control" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="dns-control" value="No"> No
-              </label>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="input-dns-control" name="dns-control">
-            </div>
-          </div>
-
-          <h2>CMS</h2>
-
-          <div class="form-group">
-            <label>
-              Do you have a current content management system?
+            <label for="input-company">
+              Company
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-current" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-current" value="No"> No
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="cms-current-name">
+            <input type="text" class="form-control" id="input-company" name="company">
           </div>
+        </div>
 
-          <div class="form-group">
-            <label>
-              Do you find it easy to use?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-ease" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-ease" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-cms-difficult-areas">
-              What areas are difficult to manage?
-            </label>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Posts"> Posts
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Pages"> Pages
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Forms"> Forms
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Menus"> Menus
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Appearance"> Appearance
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Ecommerce"> Ecommerce
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-difficult-areas" value="Other"> Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="cms-difficult-areas-other">
-          </div>
-
-          <div class="form-group">
-            <label>
-              How comfortable are you with your CMS?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Very Comfortable"> Very Comfortable
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Comfortable"> Comfortable
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Somewhat Comfortable"> Somewhat Comfortable
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Somewhat Uncomfortable"> Somewhat Uncomfortable
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Uncomfortable"> Uncomfortable
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cms-comfort" value="Very Uncomfortable"> Very Uncomfortable
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Can You Easily:
-            </label>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="Upload Images"> Upload Images
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="Create Posts/Pages"> Create Posts/Pages
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="Update Content"> Update Content
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="Update Menus"> Update Menus
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="Manage Users"> Manage Users
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="cms-can-you" value="View Contact Leads"> View Contact Leads
-              </label>
-            </div>
-          </div>
-
-          <h2>Traffic</h2>
-
-          <div class="form-group">
-            <label for="input-traffic">
-              How many monthly views does your site get?
-            </label>
-            <input type="text" class="form-control" id="input-traffic" name="traffic">
-          </div>
+        <div class="col-md-6" id="content">
 
           <h2>Content</h2>
 
@@ -265,12 +62,12 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="content-text" value="Yes"> Yes
+                <input type="radio" name="content-text" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="content-text" value="No"> No
+                <input type="radio" name="content-text" value="No">No
               </label>
             </div>
           </div>
@@ -282,12 +79,12 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="content-image" value="Yes"> Yes
+                <input type="radio" name="content-image" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="content-image" value="No"> No
+                <input type="radio" name="content-image" value="No">No
               </label>
             </div>
           </div>
@@ -299,15 +96,147 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="content-other" value="Yes"> Yes
+                <input type="radio" name="content-other" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="content-other" value="No"> No
+                <input type="radio" name="content-other" value="No">No
               </label>
             </div>
           </div>
+        </div>
+
+        <div class="col-md-6" id="internationalization-localization">
+
+          <h2>Internationalization / Localization</h2>
+
+          <div class="form-group">
+            <label for="input-internationalization-localization">
+              Do you have content in multiple languages?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="internationalization-localization" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="internationalization-localization" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-languages">
+              Which languages is your content in?
+            </label>
+
+            <textarea name="languages" id="input-languages" cols="30" rows="10" class="form-control" placeholder="One language per line"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="forms">
+
+          <h2>Forms</h2>
+
+          <div class="form-group">
+            <label>
+              How many web forms does your new site need?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="None">None
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="1 - 2">1 - 2
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="3 - 10">3 - 10
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="More">More
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-forms-purpose">
+              What is the purpose of each form?
+            </label>
+
+            <textarea name="forms-purpose" id="input-forms-purpose" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="password-protected">
+
+          <h2>Password Protected</h2>
+
+          <div class="form-group">
+            <label>
+              Do you need any password protected areas?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="password-protected" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="password-protected" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              What kind of content will be put behind password protection?
+            </label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Payment Information">Payment Information
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Images/Media">Images/Media
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Posts">Posts
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Pages">Pages
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Forms">Forms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" id="input-password-content-other" name="password-content-other">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="features">
 
           <h2>Features</h2>
 
@@ -334,12 +263,12 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="features-url-preserve" value="Yes"> Yes
+                <input type="radio" name="features-url-preserve" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="features-url-preserve" value="No"> No
+                <input type="radio" name="features-url-preserve" value="No">No
               </label>
             </div>
           </div>
@@ -351,370 +280,18 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="features-content-preserve" value="Yes"> Yes
+                <input type="radio" name="features-content-preserve" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="features-content-preserve" value="No"> No
+                <input type="radio" name="features-content-preserve" value="No">No
               </label>
             </div>
           </div>
-
-          <h2>Password Protected</h2>
-
-          <div class="form-group">
-            <label>
-              Do you need any password protected areas?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              What kind of content will be put behind password protection?
-            </label>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Payment Information"> Payment Information
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Images/Media"> Images/Media
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Posts"> Posts
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Pages"> Pages
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Forms"> Forms
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Other"> Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" id="input-password-content-other" name="password-content-other">
-          </div>
-
-          <h2>Forms</h2>
-
-          <div class="form-group">
-            <label>
-              How many web forms does your new site need?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="None"> None
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="1 - 2"> 1 - 2
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="3 - 10"> 3 - 10
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="More"> More
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-forms-purpose">
-              What is the purpose of each form?
-            </label>
-
-            <textarea name="forms-purpose" id="input-forms-purpose" cols="30" rows="10" class="form-control"></textarea>
-          </div>
-
-          <h2>Accessibility</h2>
-
-          <div class="form-group">
-            <label>
-              Will web visitors have any special needs? (eyesight, )
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <h2>Tracking</h2>
-
-          <div class="form-group">
-            <label>
-              Do you have a Google Analytics account?
-            </label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-analytics" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-analytics" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have an AdWords account?
-            </label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-adwords" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-adwords" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have a Google Webmaster Tools or Bing Webmaster Tools account?
-            </label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-webmaster-tools" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="tracking-webmaster-tools" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <h2>Newsletter</h2>
-
-          <div class="form-group">
-            <label>
-              Do you have a newsletter subscription?
-            </label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="newsletter" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="newsletter" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="newsletter-type" value="MailChimp"> a MailChimp account
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="newsletter-type" value="Constant Contact"> a Constant Contact account
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="newsletter-type" value="Other"> Other
-              </label>
-            </div>
-          </div>
-          <input type="text" class="form-control" name="newsletter-type-other">
         </div>
 
-        <div class="col-md-6">
-
-          <h2>E-Commerce</h2>
-
-          <div class="form-group">
-            <label>
-              Do you want to process payments?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Authorize.net"> an Authorize.net account
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Authorize.net"> a Stripe account
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Other"> Other
-              </label>
-            </div>
-
-            <input type="text" name="ecommerce-type-other" class="form-control">
-          </div>
-
-          <h2>Ads</h2>
-
-          <div class="form-group">
-            <label>
-              Will you have ads on your site?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ads" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ads" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <h2>Internationalization / Localization</h2>
-
-          <div class="form-group">
-            <label for="input-internationalization-localization">
-              Do you have content in multiple languages?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="internationalization-localization" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="internationalization-localization" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-languages">
-              Which languages is your content in?
-            </label>
-
-            <textarea name="languages" id="input-languages" cols="30" rows="10" class="form-control" placeholder="One language per line"></textarea>
-          </div>
-
-          <h2>Social</h2>
-
-          <div class="form-group">
-            <label>
-              Do you want to integrate a social feed?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="social" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="social" value="No"> No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Twitter"> Twitter
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Facebook"> Facebook
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Yelp"> Yelp
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="LinkedIn"> LinkedIn
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Pinterest"> Pinterest
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Tumblr"> Tumblr
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Other"> Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="social-type-other">
-          </div>
+        <div class="col-md-6" id="webfonts">
 
           <h2>Webfonts</h2>
 
@@ -725,12 +302,12 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="webfonts" value="Yes"> Yes
+                <input type="radio" name="webfonts" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="webfonts" value="No"> No
+                <input type="radio" name="webfonts" value="No">No
               </label>
             </div>
 
@@ -744,22 +321,25 @@
 
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="webfonts-type" value="Typekit"> a Typekit account
+                <input type="checkbox" name="webfonts-type" value="Typekit">a Typekit account
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="webfonts-type" value="Typography.com"> a Typography.com account
+                <input type="checkbox" name="webfonts-type" value="Typography.com">a Typography.com account
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="webfonts-type" value="Other"> Other
+                <input type="checkbox" name="webfonts-type" value="Other">Other
               </label>
             </div>
 
             <input type="text" class="form-control" name="webfonts-type-other">
           </div>
+        </div>
+
+        <div class="col-md-6" id="mobile">
 
           <h2>Mobile</h2>
 
@@ -770,6 +350,493 @@
 
             <input type="text" class="form-control" id="input-mobile" name="mobile">
           </div>
+        </div>
+
+        <div class="col-md-6" id="social">
+
+          <h2>Social</h2>
+
+          <div class="form-group">
+            <label>
+              Do you want to integrate a social feed?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="social" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="social" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Twitter">Twitter
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Facebook">Facebook
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Yelp">Yelp
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="LinkedIn">LinkedIn
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Pinterest">Pinterest
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Tumblr">Tumblr
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="social-type-other">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="ads">
+          <h2>Ads</h2>
+
+          <div class="form-group">
+            <label>
+              Will you have ads on your site?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ads" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ads" value="No">No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="e-commerce">
+
+          <h2>E-Commerce</h2>
+
+          <div class="form-group">
+            <label>
+              Do you want to process payments?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Authorize.net">an Authorize.net account
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Authorize.net">a Stripe account
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" name="ecommerce-type-other" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="webhost-and-dns">
+          <h2>Webhost and DNS</h2>
+
+          <div class="form-group">
+            <label for="input-webhost">
+              Whom is your current webhost?
+            </label>
+
+            <input type="text" class="form-control" id="input-webhost" name="webhost">
+          </div>
+
+          <div class="form-group">
+            <label for="input-webhost-wordpress">
+              Do they support Wordpress?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="No">No
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-wordpress" value="Don't Know">Don't Know
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-webhost-node">
+              Do they support Node.js?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="No">No
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webhost-node" value="Don't Know">Don't Know
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-dns-control">
+              Where your DNS is controlled?
+            </label>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="input-dns-control" name="dns-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="cms">
+
+          <h2>CMS</h2>
+
+          <div class="form-group">
+            <label>
+              Do you have a current content management system?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="No">No
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="cms-current-name">
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you find it easy to use?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-ease" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-ease" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-cms-difficult-areas">
+              What areas are difficult to manage?
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Posts">Posts
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Pages">Pages
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Forms">Forms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Menus">Menus
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Appearance">Appearance
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Ecommerce">Ecommerce
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-difficult-areas" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="cms-difficult-areas-other">
+          </div>
+
+          <div class="form-group">
+            <label>
+              How comfortable are you with your CMS?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Very Comfortable">Very Comfortable
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Comfortable">Comfortable
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Somewhat Comfortable">Somewhat Comfortable
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Somewhat Uncomfortable">Somewhat Uncomfortable
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Uncomfortable">Uncomfortable
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-comfort" value="Very Uncomfortable">Very Uncomfortable
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Can You Easily:
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Upload Images">Upload Images
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Create Posts/Pages">Create Posts/Pages
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Update Content">Update Content
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Update Menus">Update Menus
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Manage Users">Manage Users
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="View Contact Leads">View Contact Leads
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="traffic">
+
+          <h2>Traffic</h2>
+
+          <div class="form-group">
+            <label for="input-traffic">
+              How many monthly views does your site get?
+            </label>
+            <input type="text" class="form-control" id="input-traffic" name="traffic">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="accessibility">
+
+          <h2>Accessibility</h2>
+
+          <div class="form-group">
+            <label>
+              Will web visitors have any special needs? (eyesight, )
+              <div class="radio">
+                <label>
+                  <input type="radio" name="password-protected" value="Yes">Yes
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="password-protected" value="No">No
+                </label>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="tracking">
+
+          <h2>Tracking</h2>
+
+          <div class="form-group">
+            <label>
+              Do you have a Google Analytics account?
+            </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-analytics" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-analytics" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have an AdWords account?
+            </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-adwords" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-adwords" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have a Google Webmaster Tools or Bing Webmaster Tools account?
+            </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-webmaster-tools" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="tracking-webmaster-tools" value="No">No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="newsletter">
+          <h2>Newsletter</h2>
+
+          <div class="form-group">
+            <label>
+              Do you have a newsletter subscription?
+            </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="newsletter" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="newsletter" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="newsletter-type" value="MailChimp">a MailChimp account
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="newsletter-type" value="Constant Contact">a Constant Contact account
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="newsletter-type" value="Other">Other
+              </label>
+            </div>
+          </div>
+          <input type="text" class="form-control" name="newsletter-type-other">
+        </div>
+
+        <div class="col-md-6" id="bigger-picture">
 
           <h2>Bigger Picture</h2>
 
@@ -812,6 +879,9 @@
 
             <input type="text" class="form-control" id="input-inspiration-hate" name="inspiration-hate">
           </div>
+        </div>
+
+        <div class="col-md-6" id="whats-new">
 
           <h2>What's New</h2>
 
@@ -846,67 +916,67 @@
 
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A shopping cart"> A shopping cart
+                <input type="checkbox" name="new-features" value="A shopping cart">A shopping cart
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="Social media implementation"> Social media implementation
+                <input type="checkbox" name="new-features" value="Social media implementation">Social media implementation
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="Email collection and email marketing capability"> Email collection and email marketing capability
+                <input type="checkbox" name="new-features" value="Email collection and email marketing capability">Email collection and email marketing capability
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="Auto-responders for nurturing"> Auto-responders for nurturing
+                <input type="checkbox" name="new-features" value="Auto-responders for nurturing">Auto-responders for nurturing
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A blog or news feed"> A blog or news feed
+                <input type="checkbox" name="new-features" value="A blog or news feed">A blog or news feed
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="Photo galleries"> Photo galleries
+                <input type="checkbox" name="new-features" value="Photo galleries">Photo galleries
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="Onsite videos"> Onsite videos
+                <input type="checkbox" name="new-features" value="Onsite videos">Onsite videos
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A slider banner"> A slider banner
+                <input type="checkbox" name="new-features" value="A slider banner">A slider banner
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A mobile site"> A mobile site
+                <input type="checkbox" name="new-features" value="A mobile site">A mobile site
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A responsive site"> A responsive site
+                <input type="checkbox" name="new-features" value="A responsive site">A responsive site
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A blog or news page"> A blog or news page
+                <input type="checkbox" name="new-features" value="A blog or news page">A blog or news page
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="The ability for people to leave comments"> The ability for people to leave comments
+                <input type="checkbox" name="new-features" value="The ability for people to leave comments">The ability for people to leave comments
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="new-features" value="A quick contact form, quote request or booking form"> A quick contact form, quote request or booking form
+                <input type="checkbox" name="new-features" value="A quick contact form, quote request or booking form">A quick contact form, quote request or booking form
               </label>
             </div>
           </div>
@@ -918,12 +988,12 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="sitemap" value="Yes"> Yes
+                <input type="radio" name="sitemap" value="Yes">Yes
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="sitemap" value="No"> No
+                <input type="radio" name="sitemap" value="No">No
               </label>
             </div>
           </div>
@@ -952,4 +1022,5 @@
   </div>
 
 </body>
+
 </html>
