@@ -51,6 +51,191 @@
           </div>
         </div>
 
+        <div class="col-md-6" id="content">
+
+          <h2>Content</h2>
+
+          <div class="form-group">
+            <label for="input-content-text">
+              Do you have text content you want to transfer?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-text" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-text" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-content-image">
+              Do you have image content you want to transfer?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-image" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-image" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-content-other">
+              Do you have other structured data you want to transfer?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-other" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="content-other" value="No">No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="internationalization-localization">
+
+          <h2>Internationalization / Localization</h2>
+
+          <div class="form-group">
+            <label for="input-internationalization-localization">
+              Do you have content in multiple languages?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="internationalization-localization" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="internationalization-localization" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-languages">
+              Which languages is your content in?
+            </label>
+
+            <textarea name="languages" id="input-languages" cols="30" rows="10" class="form-control" placeholder="One language per line"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="forms">
+
+          <h2>Forms</h2>
+
+          <div class="form-group">
+            <label>
+              How many web forms does your new site need?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="None">None
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="1 - 2">1 - 2
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="3 - 10">3 - 10
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="More">More
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-forms-purpose">
+              What is the purpose of each form?
+            </label>
+
+            <textarea name="forms-purpose" id="input-forms-purpose" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="password-protected">
+
+          <h2>Password Protected</h2>
+
+          <div class="form-group">
+            <label>
+              Do you need any password protected areas?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="password-protected" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="password-protected" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              What kind of content will be put behind password protection?
+            </label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Payment Information">Payment Information
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Images/Media">Images/Media
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Posts">Posts
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Pages">Pages
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Forms">Forms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="password-content" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" id="input-password-content-other" name="password-content-other">
+          </div>
+        </div>
+
         <div class="col-md-6" id="features">
 
           <h2>Features</h2>
@@ -103,6 +288,200 @@
                 <input type="radio" name="features-content-preserve" value="No">No
               </label>
             </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="webfonts">
+
+          <h2>Webfonts</h2>
+
+          <div class="form-group">
+            <label>
+              Do you have brand specific fonts?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="webfonts" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webfonts" value="No">No
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="webfonts-names">
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="webfonts-type" value="Typekit">a Typekit account
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="webfonts-type" value="Typography.com">a Typography.com account
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="webfonts-type" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="webfonts-type-other">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="mobile">
+
+          <h2>Mobile</h2>
+
+          <div class="form-group">
+            <label for="input-mobile">
+              Do you have any specific mobile requirements?
+            </label>
+
+            <input type="text" class="form-control" id="input-mobile" name="mobile">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="social">
+
+          <h2>Social</h2>
+
+          <div class="form-group">
+            <label>
+              Do you want to integrate a social feed?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="social" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="social" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Twitter">Twitter
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Facebook">Facebook
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Yelp">Yelp
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="LinkedIn">LinkedIn
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Pinterest">Pinterest
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Tumblr">Tumblr
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="social-type" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" class="form-control" name="social-type-other">
+          </div>
+        </div>
+
+        <div class="col-md-6" id="ads">
+          <h2>Ads</h2>
+
+          <div class="form-group">
+            <label>
+              Will you have ads on your site?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ads" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ads" value="No">No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="e-commerce">
+
+          <h2>E-Commerce</h2>
+
+          <div class="form-group">
+            <label>
+              Do you want to process payments?
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce" value="Yes">Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce" value="No">No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Do you have:
+            </label>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Authorize.net">an Authorize.net account
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Authorize.net">a Stripe account
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="ecommerce-type" value="Other">Other
+              </label>
+            </div>
+
+            <input type="text" name="ecommerce-type-other" class="form-control">
           </div>
         </div>
 
@@ -342,163 +721,6 @@
           </div>
         </div>
 
-        <div class="col-md-6" id="content">
-
-          <h2>Content</h2>
-
-          <div class="form-group">
-            <label for="input-content-text">
-              Do you have text content you want to transfer?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-text" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-text" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-content-image">
-              Do you have image content you want to transfer?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-image" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-image" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-content-other">
-              Do you have other structured data you want to transfer?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-other" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="content-other" value="No">No
-              </label>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="col-md-6" id="password-protected">
-
-          <h2>Password Protected</h2>
-
-          <div class="form-group">
-            <label>
-              Do you need any password protected areas?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="password-protected" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              What kind of content will be put behind password protection?
-            </label>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Payment Information">Payment Information
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Images/Media">Images/Media
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Posts">Posts
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Pages">Pages
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Forms">Forms
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Other">Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" id="input-password-content-other" name="password-content-other">
-          </div>
-        </div>
-
-        <div class="col-md-6" id="forms">
-
-          <h2>Forms</h2>
-
-          <div class="form-group">
-            <label>
-              How many web forms does your new site need?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="None">None
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="1 - 2">1 - 2
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="3 - 10">3 - 10
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="forms-amount" value="More">More
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-forms-purpose">
-              What is the purpose of each form?
-            </label>
-
-            <textarea name="forms-purpose" id="input-forms-purpose" cols="30" rows="10" class="form-control"></textarea>
-          </div>
-        </div>
-
         <div class="col-md-6" id="accessibility">
 
           <h2>Accessibility</h2>
@@ -612,230 +834,6 @@
             </div>
           </div>
           <input type="text" class="form-control" name="newsletter-type-other">
-        </div>
-
-        <div class="col-md-6" id="e-commerce">
-
-          <h2>E-Commerce</h2>
-
-          <div class="form-group">
-            <label>
-              Do you want to process payments?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Authorize.net">an Authorize.net account
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Authorize.net">a Stripe account
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ecommerce-type" value="Other">Other
-              </label>
-            </div>
-
-            <input type="text" name="ecommerce-type-other" class="form-control">
-          </div>
-        </div>
-
-        <div class="col-md-6" id="ads">
-          <h2>Ads</h2>
-
-          <div class="form-group">
-            <label>
-              Will you have ads on your site?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="ads" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="ads" value="No">No
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" id="internationalization-localization">
-
-          <h2>Internationalization / Localization</h2>
-
-          <div class="form-group">
-            <label for="input-internationalization-localization">
-              Do you have content in multiple languages?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="internationalization-localization" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="internationalization-localization" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="input-languages">
-              Which languages is your content in?
-            </label>
-
-            <textarea name="languages" id="input-languages" cols="30" rows="10" class="form-control" placeholder="One language per line"></textarea>
-          </div>
-        </div>
-
-        <div class="col-md-6" id="social">
-
-          <h2>Social</h2>
-
-          <div class="form-group">
-            <label>
-              Do you want to integrate a social feed?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="social" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="social" value="No">No
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Twitter">Twitter
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Facebook">Facebook
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Yelp">Yelp
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="LinkedIn">LinkedIn
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Pinterest">Pinterest
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Tumblr">Tumblr
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="social-type" value="Other">Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="social-type-other">
-          </div>
-        </div>
-
-        <div class="col-md-6" id="webfonts">
-
-          <h2>Webfonts</h2>
-
-          <div class="form-group">
-            <label>
-              Do you have brand specific fonts?
-            </label>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="webfonts" value="Yes">Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="webfonts" value="No">No
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="webfonts-names">
-          </div>
-
-          <div class="form-group">
-            <label>
-              Do you have:
-            </label>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="webfonts-type" value="Typekit">a Typekit account
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="webfonts-type" value="Typography.com">a Typography.com account
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="webfonts-type" value="Other">Other
-              </label>
-            </div>
-
-            <input type="text" class="form-control" name="webfonts-type-other">
-          </div>
-        </div>
-
-        <div class="col-md-6" id="mobile">
-
-          <h2>Mobile</h2>
-
-          <div class="form-group">
-            <label for="input-mobile">
-              Do you have any specific mobile requirements?
-            </label>
-
-            <input type="text" class="form-control" id="input-mobile" name="mobile">
-          </div>
         </div>
 
         <div class="col-md-6" id="bigger-picture">
