@@ -74,27 +74,28 @@
           <h2>DNS</h2>
 
           <div class="form-group">
-            <label for="input-dns-control">
+            <label>
               Do you know where your DNS is controlled?
             </label>
-
-            <input type="text" class="form-control" id="input-dns-control" name="dns-control">
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="dns-control" value="Yes"> Yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="dns-control" value="No"> No
-            </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="dns-control" value="Yes"> Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="dns-control" value="No"> No
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input-dns-control" name="dns-control">
+            </div>
           </div>
 
           <h2>CMS</h2>
 
           <div class="form-group">
-            <label for="input-cms-current">
+            <label>
               Do you have a current content management system?
             </label>
 
@@ -108,10 +109,12 @@
                 <input type="radio" name="cms-current" value="No"> No
               </label>
             </div>
+
+            <input type="text" class="form-control" name="cms-current-name">
           </div>
 
           <div class="form-group">
-            <label for="input-cms-ease">
+            <label>
               Do you find it easy to use?
             </label>
 
@@ -167,11 +170,11 @@
               </label>
             </div>
 
-            <input type="text" class="form-control" id="input-cms-difficult-areas-other" name="cms-difficult-areas-other">
+            <input type="text" class="form-control" name="cms-difficult-areas-other">
           </div>
 
           <div class="form-group">
-            <label for="input-cms-comfort">
+            <label>
               How comfortable are you with your CMS?
             </label>
 
@@ -208,7 +211,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-cms-can-you">
+            <label>
               Can You Easily:
             </label>
 
@@ -219,12 +222,27 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="cms-can-you" value="Create Posts"> Create Posts
+                <input type="checkbox" name="cms-can-you" value="Create Posts/Pages"> Create Posts/Pages
               </label>
             </div>
             <div class="checkbox">
               <label>
                 <input type="checkbox" name="cms-can-you" value="Update Content"> Update Content
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Update Menus"> Update Menus
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="Manage Users"> Manage Users
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="cms-can-you" value="View Contact Leads"> View Contact Leads
               </label>
             </div>
           </div>
@@ -298,16 +316,7 @@
               Is there anything on the current website that needs to be removed entirely?
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="features-remove" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="features-remove" value="No"> No
-              </label>
-            </div>
+            <textarea name="features-remove" id="input-features-remove" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
           <div class="form-group">
@@ -315,16 +324,7 @@
               Is there anything on the current website that must absolute stay?
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="features-stay" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="features-stay" value="No"> No
-              </label>
-            </div>
+            <textarea name="features-stay" id="input-features-stay" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
           <div class="form-group">
@@ -364,7 +364,7 @@
           <h2>Password Protected</h2>
 
           <div class="form-group">
-            <label for="input-password-protected">
+            <label>
               Do you need any password protected areas?
             </label>
 
@@ -381,7 +381,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-password-content">
+            <label>
               What kind of content will be put behind password protection?
             </label>
             <div class="checkbox">
@@ -391,12 +391,7 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="password-content" value="Member Login"> Member Login
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="password-content" value="Admin Login"> Admin Login
+                <input type="checkbox" name="password-content" value="Images/Media"> Images/Media
               </label>
             </div>
             <div class="checkbox">
@@ -425,11 +420,30 @@
           <h2>Forms</h2>
 
           <div class="form-group">
-            <label for="input-forms-amount">
+            <label>
               How many web forms does your new site need?
             </label>
 
-            <input type="text" class="form-control" id="input-forms-amount" name="forms-amount">
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="None"> None
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="1 - 2"> 1 - 2
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="3 - 10"> 3 - 10
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="forms-amount" value="More"> More
+              </label>
+            </div>
           </div>
 
           <div class="form-group">
@@ -437,13 +451,13 @@
               What is the purpose of each form?
             </label>
 
-            <input type="text" class="form-control" id="input-forms-purpose" name="forms-purpose">
+            <textarea name="forms-purpose" id="input-forms-purpose" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
           <h2>Accessibility</h2>
 
           <div class="form-group">
-            <label for="accessibility">
+            <label>
               Will web visitors have any special needs? (eyesight, )
             <div class="radio">
               <label>
@@ -460,7 +474,7 @@
           <h2>Tracking</h2>
 
           <div class="form-group">
-            <label for="input-tracking-analytics">
+            <label>
               Do you have a Google Analytics account?
             </label>
             <div class="radio">
@@ -476,7 +490,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-tracking-adwords">
+            <label>
               Do you have an AdWords account?
             </label>
             <div class="radio">
@@ -492,7 +506,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-tracking-webmaster-tools">
+            <label>
               Do you have a Google Webmaster Tools or Bing Webmaster Tools account?
             </label>
             <div class="radio">
@@ -510,7 +524,7 @@
           <h2>Newsletter</h2>
 
           <div class="form-group">
-            <label for="input-newsletter">
+            <label>
               Do you have a newsletter subscription?
             </label>
             <div class="radio">
@@ -520,13 +534,13 @@
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="newletter" value="No"> No
+                <input type="radio" name="newsletter" value="No"> No
               </label>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="input-newsletter-type">
+            <label>
               Do you have:
             </label>
             <div class="checkbox">
@@ -545,6 +559,7 @@
               </label>
             </div>
           </div>
+          <input type="text" class="form-control" name="newsletter-type-other">
         </div>
 
         <div class="col-md-6">
@@ -552,7 +567,7 @@
           <h2>E-Commerce</h2>
 
           <div class="form-group">
-            <label for="input-ecommerce">
+            <label>
               Do you want to process payments?
             </label>
 
@@ -569,32 +584,34 @@
           </div>
 
           <div class="form-group">
-            <label for="input-ecommerce-type">
+            <label>
               Do you have:
             </label>
 
-            <div class="checkbox">
+            <div class="radio">
               <label>
-                <input type="checkbox" name="eccmmerce-type" value="Authorize.net"> an Authorize.net account
+                <input type="radio" name="ecommerce-type" value="Authorize.net"> an Authorize.net account
               </label>
             </div>
-            <div class="checkbox">
+            <div class="radio">
               <label>
-                <input type="checkbox" name="eccmmerce-type" value="Authorize.net"> a Stripe account
+                <input type="radio" name="ecommerce-type" value="Authorize.net"> a Stripe account
               </label>
             </div>
-            <div class="checkbox">
+            <div class="radio">
               <label>
-                <input type="checkbox" name="eccmmerce-type" value="Other"> Other
+                <input type="radio" name="ecommerce-type" value="Other"> Other
               </label>
             </div>
+
+            <input type="text" name="ecommerce-type-other" class="form-control">
           </div>
 
           <h2>Ads</h2>
 
           <div class="form-group">
-            <label for="input-ads">
-              Do you have ads on your site?
+            <label>
+              Will you have ads on your site?
             </label>
 
             <div class="radio">
@@ -628,10 +645,18 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label for="input-languages">
+              Which languages is your content in?
+            </label>
+
+            <textarea name="languages" id="input-languages" cols="30" rows="10" class="form-control" placeholder="One language per line"></textarea>
+          </div>
+
           <h2>Social</h2>
 
           <div class="form-group">
-            <label for="input-social">
+            <label>
               Do you want to integrate a social feed?
             </label>
 
@@ -648,7 +673,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-social-type">
+            <label>
               Do you have:
             </label>
 
@@ -687,12 +712,14 @@
                 <input type="checkbox" name="social-type" value="Other"> Other
               </label>
             </div>
+
+            <input type="text" class="form-control" name="social-type-other">
           </div>
 
           <h2>Webfonts</h2>
 
           <div class="form-group">
-            <label for="input-webfonts">
+            <label>
               Do you have brand specific fonts?
             </label>
 
@@ -706,10 +733,12 @@
                 <input type="radio" name="webfonts" value="No"> No
               </label>
             </div>
+
+            <input type="text" class="form-control" name="webfonts-names">
           </div>
 
           <div class="form-group">
-            <label for="input-webfonts-type">
+            <label>
               Do you have:
             </label>
 
@@ -728,6 +757,8 @@
                 <input type="checkbox" name="webfonts-type" value="Other"> Other
               </label>
             </div>
+
+            <input type="text" class="form-control" name="webfonts-type-other">
           </div>
 
           <h2>Mobile</h2>
@@ -737,16 +768,7 @@
               Do you have any specific mobile requirements?
             </label>
 
-            <div class="radio">
-              <label>
-                <input type="radio" name="mobile" value="Yes"> Yes
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="mobile" value="No"> No
-              </label>
-            </div>
+            <input type="text" class="form-control" id="input-mobile" name="mobile">
           </div>
 
           <h2>Bigger Picture</h2>
@@ -818,7 +840,7 @@
           </div>
 
           <div class="form-group">
-            <label for="new-features">
+            <label>
               What features are you looking to include/add?
             </label>
 
@@ -890,7 +912,7 @@
           </div>
 
           <div class="form-group">
-            <label for="input-sitemap">
+            <label>
               Do you have a proposed sitemap prepared?
             </label>
 
@@ -907,7 +929,7 @@
           </div>
 
           <div class="form-group">
-            <label for="new-objectives">
+            <label for="input-new-objectives">
               What would be a success for this website?
             </label>
 
@@ -915,7 +937,7 @@
           </div>
 
           <div class="form-group">
-            <label for="new-live">
+            <label for="input-new-live">
               What is your desired date for go-live?
             </label>
 
