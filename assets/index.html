@@ -94,6 +94,10 @@
               Do you have other structured data you want to transfer?
             </label>
 
+            <div class="help-block">
+              Structured data includes user accounts, events calendars, etc.
+            </div>
+
             <div class="radio">
               <label>
                 <input type="radio" name="content-other" value="Yes">Yes
@@ -201,6 +205,10 @@
               How many web forms does your new site need?
             </label>
 
+            <div class="help-block">
+              Most websites have at least on form for generating contact leads
+            </div>
+
             <div class="radio">
               <label>
                 <input type="radio" name="forms-amount" value="None">None
@@ -240,6 +248,10 @@
             <label>
               Do you need any password protected areas?
             </label>
+
+            <div class="help-block">
+              Folders in a website can be protected either with just a password or a username and password combination
+            </div>
 
             <div class="radio">
               <label>
@@ -501,6 +513,14 @@
               Do they support Wordpress?
             </label>
 
+            <div class="help-block">
+              Wordpress requires:
+              <ul>
+                <li>PHP version 5.2.4 or greater</li>
+                <li>MySQL version 5.0 or greater</li>
+              </ul>
+            </div>
+
             <div class="radio">
               <label>
                 <input type="radio" name="webhost-wordpress" value="Yes">Yes
@@ -562,16 +582,46 @@
 
             <div class="radio">
               <label>
-                <input type="radio" name="cms-current" value="Yes">Yes
+                <input type="radio" name="cms-current" value="Wordpress">Wordpress
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="cms-current" value="No">No
+                <input type="radio" name="cms-current" value="Drupal">Drupal
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Joomla">Joomla
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Squarespace">Squarespace
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="ExpressionEngine">ExpressionEngine
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Magento">Magento
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Blogger">Blogger
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="cms-current" value="Other">Other
               </label>
             </div>
 
-            <input type="text" class="form-control" name="cms-current-name">
+            <input type="text" class="form-control" name="cms-current-other">
           </div>
 
           <div class="form-group">
@@ -749,6 +799,9 @@
             <label>
               Do you have a Google Analytics account?
             </label>
+            <div class="help-block">
+              Google Analytics tracks users and their activity
+            </div>
             <div class="radio">
               <label>
                 <input type="radio" name="tracking-analytics" value="Yes">Yes
@@ -763,7 +816,7 @@
 
           <div class="form-group">
             <label>
-              Do you have an AdWords account?
+              Do you have a Google AdWords account?
             </label>
             <div class="radio">
               <label>
