@@ -38,3 +38,6 @@ assets/vendor
 
 # Bundled Browserify
 assets/js/*bundle.js
+
+*.swp
+*.swo
